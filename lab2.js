@@ -54,9 +54,29 @@ class Sedan extends Car {
     this.balance = balance
   }
   info() {
-    console.log(`${this.model}$has a balance of $${this.balance}`)
+    console.log(`${this.model} has a balance of $${this.balance}`)
   }
 }
 
 const sedan = new Sedan('Volvo SD', 2018, 30000)
 sedan.info()
+
+const showOutput = () => {
+  let a = 3
+  let b = 4
+  let c = 5
+  return [a,b,c]
+}
+
+[a,b,c] = showOutput()
+
+console.log(a+b+c)
+
+const promise = new Promise((resolve, reject)=> {
+  let x = 1
+  if(x>10) {
+    resolve()
+  }else reject()
+})
+promise.then(()=>console.log("success")).catch(()=>console.log("rejected")).finally(()=>console.log("do something"))
+
